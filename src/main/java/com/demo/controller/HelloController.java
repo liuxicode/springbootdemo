@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,15 +14,11 @@ import java.util.Map;
 public class HelloController {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private HelloService helloService;
 
     @RequestMapping("/helloworld")
     public Map<String,Object> hello(@RequestParam("name") String name){
 
-         String sql = "select * from sys_user where username = ?";
-
-        Map<String,Object> user = jdbcTemplate.queryForMap(sql,new String[]{name});
-
-        return user;
+        return helloService.hello(name);
     }
 }
