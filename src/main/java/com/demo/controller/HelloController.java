@@ -21,4 +21,22 @@ public class HelloController {
 
         return helloService.hello(name);
     }
+
+    @RequestMapping("/test")
+    public String test(@RequestParam("name") String name){
+
+        return "hello world "+ name;
+    }
+
+    @RequestMapping("/update")
+    public int update(@RequestParam("name") String name,
+                      @RequestParam("password") String password){
+        return helloService.update(name,password);
+    }
+
+    @RequestMapping("/update2")
+    public int update2(@RequestParam("name") String name,
+                      @RequestParam("password") String password){
+        return helloService.update2(name,password);
+    }
 }
