@@ -16,11 +16,11 @@ public class HelloController {
     @Autowired
     private HelloService helloService;
 
-    @RequestMapping("/helloworld")
+    /*@RequestMapping("/helloworld")
     public Map<String,Object> hello(@RequestParam("name") String name){
 
         return helloService.hello(name);
-    }
+    }*/
 
     @RequestMapping("/test")
     public String test(@RequestParam("name") String name){
@@ -28,7 +28,7 @@ public class HelloController {
         return "hello world "+ name;
     }
 
-    @RequestMapping("/update")
+    /*@RequestMapping("/update")
     public int update(@RequestParam("name") String name,
                       @RequestParam("password") String password){
         return helloService.update(name,password);
@@ -38,5 +38,5 @@ public class HelloController {
     public int update2(@RequestParam("name") String name,
                       @RequestParam("password") String password){
         return helloService.update2(name,password);
-    }
+    }*/
 }

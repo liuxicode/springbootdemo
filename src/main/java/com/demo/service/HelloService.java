@@ -11,7 +11,7 @@ import java.util.Map;
 @Service
 public class HelloService {
 
-    @Autowired
+    /*@Autowired
     private JdbcTemplate jdbcTemplate;
 
     public Map<String,Object> hello(String name){
@@ -51,5 +51,5 @@ public class HelloService {
         int status = jdbcTemplate.update(sql,new String[]{password,name});
 
         return status;
-    }
+    }*/
 }
