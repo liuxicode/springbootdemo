@@ -24,7 +24,7 @@ public class HelloController {
     @RequestMapping("/test")
     public String test(@RequestParam("name") String name){
 
-        return "hello world "+ name;
+        return "test: hello world"+ name;
     }
 
     /*@RequestMapping("/update")
