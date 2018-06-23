@@ -1,11 +1,17 @@
 package com.demo.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.util.Map;
 
 @Service
 public class HelloService {
 
-    /*@Autowired
+    @Autowired
     private JdbcTemplate jdbcTemplate;
 
     public Map<String,Object> hello(String name){
@@ -45,5 +51,5 @@ public class HelloService {
         int status = jdbcTemplate.update(sql,new String[]{password,name});
 
         return status;
-    }*/
+    }
 }
