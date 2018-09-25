@@ -66,7 +66,7 @@ public class FileBrowseService {
        return "";
     }
 
-    public String testCode() throws Exception {
+    public String testCode(String name) throws Exception {
 
         logger.info("------------------testCode start ----------------------");
 
@@ -79,7 +79,7 @@ public class FileBrowseService {
 
         //InputStream in = new FileInputStream(file);
 
-        InputStream in = FileBrowseService.class.getResourceAsStream("/file/test.doc");
+        InputStream in = FileBrowseService.class.getResourceAsStream("/file/"+name);
 
         if(in != null){
 

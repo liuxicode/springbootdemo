@@ -27,11 +27,11 @@ public class FileBrowseController {
 
     @RequestMapping("source-open/code/test")
     @ResponseBody
-    public String test() throws Exception{
+    public String test(@RequestParam("name") String name) throws Exception{
 
         logger.info("-------------------source-open/code/test------------------");
 
-        return fileBrowseService.testCode();
+        return fileBrowseService.testCode(name);
     }
 
     @RequestMapping("source-open/pdf")
