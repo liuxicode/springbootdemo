@@ -26,6 +26,7 @@ public class FileBrowseController {
     }
 
     @RequestMapping("source-open/code/test")
+    @ResponseBody
     public String test() throws Exception{
 
         logger.info("-------------------source-open/code/test------------------");
