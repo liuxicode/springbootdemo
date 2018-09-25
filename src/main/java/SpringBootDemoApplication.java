@@ -12,7 +12,7 @@ import org.springframework.session.data.redis.config.annotation.web.http.EnableR
 //@SpringBootApplication
 @SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 @ComponentScan("com.demo")
-@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60*30)
+//@EnableRedisHttpSession(maxInactiveIntervalInSeconds = 60*30)
 public class SpringBootDemoApplication extends SpringBootServletInitializer {
 
     private final Logger logger = LoggerFactory.getLogger(SpringBootDemoApplication.class);
