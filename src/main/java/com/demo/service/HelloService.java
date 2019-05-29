@@ -1,3 +1,4 @@
+/*
 package com.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,3 +54,4 @@ public class HelloService {
         return status;
     }
 }
+*/

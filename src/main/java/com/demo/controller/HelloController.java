@@ -1,6 +1,6 @@
 package com.demo.controller;
 
-import com.demo.service.HelloService;
+//import com.demo.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -12,16 +12,16 @@ import java.util.Map;
 @RequestMapping("/hello")
 public class HelloController {
 
-    @Autowired
+    /*@Autowired
     private HelloService helloService;
-
+*/
     @RequestMapping("/test")
     public String test(@RequestParam("name") String name){
 
         return "hello world"+ name;
     }
 
-    @RequestMapping("/update")
+   /* @RequestMapping("/update")
     public int update(@RequestParam("name") String name,
                       @RequestParam("password") String password){
         return helloService.update(name,password);
@@ -31,5 +31,5 @@ public class HelloController {
     public int update2(@RequestParam("name") String name,
                       @RequestParam("password") String password){
         return helloService.update2(name,password);
-    }
+    }*/
 }
